@@ -30,7 +30,7 @@ async def on_ready():
 
 @tasks.loop(minutes=1.0)
 async def status_task():  # to set a game's status
-    statuses = [f"with you! | {config['bot_prefix']}help", f"with Axie API! | {config['bot_prefix']}help", f"with humans! | {config['bot_prefix']}help"]
+    statuses = [f"with you! | {config['bot_prefix']}help", f"with humans! | {config['bot_prefix']}help"]
     await bot.change_presence(activity=discord.Game(random.choice(statuses)))
 
 bot.remove_command("help")
