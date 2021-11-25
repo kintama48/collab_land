@@ -20,6 +20,7 @@ bot = Bot(command_prefix=config["bot_prefix"], intents=intents)
 
 @bot.event
 async def on_ready():
+    await bot.change_presence(status=None)
     if not status_task.is_running():
         status_task.start()
     print(f"Logged in as {bot.user.name}")
