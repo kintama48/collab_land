@@ -26,10 +26,10 @@ class Claim(commands.Cog, name="claim"):
 
     @commands.command(name="join", description=f"Join collab.land")
     async def join(self, context):
-        embed = discord.Embed(color=0x109ab5, description="**Connect Your Account\n**"
+        embed = discord.Embed(color=0x00aacc, description="**Connect Your Account\n**"
                                                                      f"To connect your wallet/account please [Click here]({config['redirect_link']}).")
         await context.author.send(embed=embed)
-        await context.reply(embed=discord.Embed(color=0x109ab5, description="**Please check your DMs :)**"))
+#         await context.reply(embed=discord.Embed(color=0x109ab5, description="**Please check your DMs :)**"))
 
 
 
