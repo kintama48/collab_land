@@ -29,7 +29,7 @@ class Claim(commands.Cog, name="claim"):
         embed = discord.Embed(color=0x00aacc, description="**Connect Your Account\n**"
                                                                      f"To connect your wallet/account please [Click here]({config['redirect_link']}).")
         await context.author.send(embed=embed)
-#         await context.reply(embed=discord.Embed(color=0x109ab5, description="**Please check your DMs :)**"))
+        await context.send(content=f"{context.author.mention} Please check DM.")
 
 
 
