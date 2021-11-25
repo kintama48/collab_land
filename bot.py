@@ -28,11 +28,6 @@ async def on_ready():
     print(f"Running on: {platform.system()} {platform.release()} ({os.name})")
 
 
-@tasks.loop(minutes=1.0)
-async def status_task():  # to set a game's status
-    statuses = [f"with you! | {config['bot_prefix']}help", f"with humans! | {config['bot_prefix']}help"]
-    await bot.change_presence(activity=discord.Game(random.choice(statuses)))
-
 bot.remove_command("help")
 if __name__ == "__main__":  # loading the features of the bot
     for file in os.listdir("./cogs"):
