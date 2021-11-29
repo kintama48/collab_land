@@ -47,7 +47,25 @@ async def on_command_completion(ctx):  # command executed successfully
     print(
         f"Executed {executedCommand} command in {ctx.guild.name} (ID: {ctx.message.guild.id}) by {ctx.message.author} (ID: {ctx.message.author.id})")
 
-
+@bot.event
+async def on_invite_create(member):
+    pass
+    
+@bot.event
+async def on_invite_delete(member):
+    pass
+    
+@bot.event
+async def on_member_update(member):
+    pass
+    
+@bot.event
+async def on_message_delete(member):
+    pass
+    
+@bot.event
+async def on_member_join(member):
+    pass
 
 @bot.event
 async def on_message_edit(message):
