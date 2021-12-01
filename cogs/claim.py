@@ -28,8 +28,11 @@ class Claim(commands.Cog, name="claim"):
     async def join(self, context):
         embed = discord.Embed(color=0x00ACF0, description="**Connect Your Account\n**"
                                                                      f"To connect your wallet/account please [Click here]({config['redirect_link']}).")
-        await context.author.send(embed=embed)
-        await context.send(content=f"{context.author.mention} Please check dm.")
+        try:
+            await context.author.send(embed=embed)
+            await context.send(content=f"{context.author.mention} Please check dm.")
+        except:
+            await context.send(content=f"{context.author.mention} Failed to send DM. Please enable DM `User Settigs > Privacy & Safety > Allow direct messages from server members.` and try again.")
 
 
 
